@@ -1,0 +1,87 @@
+Para adaptar seu código, precisamos fazer pequenos ajustes no HTML para incluir o botão do menu e envolver seus links em uma "caixa" (container), facilitando o controle no CSS.
+Aqui está o ajuste para o seu código:
+## 1. Ajuste no HTML
+Adicione o input (checkbox) e o label (hambúrguer) dentro do seu header. Coloque os links dentro de uma nav para que possamos escondê-los de uma vez só.
+
+<header>
+    <!-- Checkbox para controlar o menu -->
+    <input type="checkbox" id="chk">
+    <label for="chk" class="menu-icon">&#9776;</label>
+
+    <nav class="menu-container">
+        <a class="menu">Apresentação</a>
+        <a class="menu">Linguagens</a>
+        <a class="menu">Produtos</a>
+        <a class="menu">Inscreva-se</a>
+    </nav>
+
+    <button class="loguin">Loguin</button>
+</header>
+
+## 2. Ajuste no CSS
+Vou manter seu estilo original e adicionar a lógica do menu no final.
+
+/* ... SEU CSS ATUAL MANTIDO ... */
+
+header {
+    display: flex; /* Adicionado para alinhar os itens */
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 52px;
+}
+/* Esconde o checkbox e o ícone no desktop */
+#chk, .menu-icon {
+    display: none;
+}
+/* MEDIA QUERY PARA TELAS MENORES (Celular) */@media (max-width: 768px) {
+    header {
+        margin-left: 20px;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone ☰ */
+        font-size: 30px;
+        cursor: pointer;
+        color: #6a5acd;
+    }
+
+    .menu-container {
+        display: none; /* Esconde os links */
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1;
+    }
+
+    .menu {
+        display: block;
+        padding: 15px;
+    }
+
+    /* O TRUQUE: Quando clicar no ícone, o menu aparece */
+    #chk:checked ~ .menu-container {
+        display: flex;
+    }
+    
+    /* Ajuste da imagem e seção para não quebrar no mobile */
+    img { width: 90%; height: auto; }
+    section { margin-top: 50px; display: block; padding: 20px; }
+}
+
+## O que mudou:
+
+   1. display: flex no Header: Usei flexbox para alinhar o ícone, o menu e o botão de login na mesma linha.
+   2. #chk:checked ~ .menu-container: Essa é a lógica mágica. Quando você clica no ícone (que está ligado ao checkbox), o CSS detecta que ele foi "marcado" e muda o estilo do seu menu de none para flex.
+   3. position: absolute: No mobile, o menu flutua abaixo do header, ocupando toda a largura da tela.
+
+Dica: O ícone &#9776; é um caractere especial que cria o símbolo de 3 barrinhas sem precisar de imagem!
+O que achou dessa solução? Quer que eu adicione algum efeito de transição para o menu aparecer suavemente?
+

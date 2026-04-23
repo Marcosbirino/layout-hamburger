@@ -69,7 +69,25 @@ p {
     border-radius: 40px;
     border: none;
     margin-bottom: 50px;
+
 }
+
+.saiba-mais:hover {
+    opacity: 0.8;
+}
+
+.saiba-mais:active {
+    opacity: 0.5;
+}
+
+.loguin:hover {
+    opacity: 0.8;
+}
+
+.loguin:active {
+    opacity: 0.5;
+}
+
 
 
 section {

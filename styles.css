@@ -150,9 +150,9 @@ section {
     }
     
     /* Ajuste da imagem e seção para não quebrar no mobile */
-    img { width: 100%; height: auto; }
-    section {margin: 40px 20px 40px 20px; width: 100%; padding: 30px;}
-    h1 {margin: 50px 55px 50px 40px; font-size:26px; text-align: center;}
+    img { width: 100%; height: auto; margin-top: auto;}
+    section {margin: 40px 20px 0 20px; width: 100%; padding: 30px;}
+    h1 {margin: 25px 40px 25px 40px; font-size:26px; text-align: center;}
    
   
 }

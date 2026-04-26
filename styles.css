@@ -150,6 +150,14 @@ section {
         display: flex;
     }
     
+<<<<<<< HEAD
+    /* Ajuste da imagem e seção para não quebrar no mobile */
+    img { width: 100%; height: auto; margin-top: auto;}
+    section {margin: 40px 20px 0 20px; width: 100%; padding: 30px;}
+    h1 {margin: 25px 40px 25px 40px; font-size:26px; text-align: center;}
+   
+  
+=======
     /* CORREÇÃO DA IMAGEM E SEÇÃO */
     img { 
         max-width: 90%; /* Não deixa passar da tela */
@@ -198,6 +206,7 @@ section {
 /* Remove a linha do último item para ficar mais limpo */
 .menu:last-child {
         border-bottom: none;
+>>>>>>> b7ce8e5c3c46711a29214faca5fd108d889e933e
 }
 
 }

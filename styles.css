@@ -11,7 +11,7 @@ header {
     justify-content: space-between; /* Empurra o conteúdo para as extremidades */
     align-items: center;
     padding: 0 20px; /* Margem interna para não colar na parede da tela */
-    margin-top: 52px;
+    margin-top: 20px;
     word-spacing: 20px;
     font-size: 50px;
 }
@@ -115,6 +115,7 @@ section {
         padding: 0 20px;
         display: flex;
         justify-content: flex-end; /* Alinha tudo (o ícone) à direita */
+        margin-top: 40px;
     }
 
     .menu-icon {
